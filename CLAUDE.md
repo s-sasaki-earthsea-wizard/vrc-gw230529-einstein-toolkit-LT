@@ -27,7 +27,7 @@
 
 ## 現在地 (2026-09-30)
 
-- スライドの第一稿が `slides-jp/index.html` にある (本編 36 枚 + Appendix 5 枚)
+- スライドの第一稿が `slides-jp/index.html` にある (本編 39 枚 + Appendix 5 枚)
 - 発表日・持ち時間は未定。持ち時間が決まったら `docs/talk_outline.md` の
   削り順に従って絞る
 - 「完走した感想」のスライドは発表者本人が書く (TBA のまま)
