@@ -4,7 +4,8 @@
        Heavy: 10 Msun  -> horizon 29.5 km, ISCO 89 km, tidal radius ~66 km
        Tidal radius drawn with the fluid Roche coefficient 2.44 and a 14 km star. -->
   <rect x="0" y="0" width="900" height="430" rx="16" fill="#ffffff"/>
-  <line x1="450" y1="24" x2="450" y2="356" stroke="#dddddd" stroke-width="1"/>
+  <line x1="450" y1="58" x2="450" y2="356" stroke="#dddddd" stroke-width="1"/>
+  <text x="450" y="40" font-size="17" fill="#777" text-anchor="middle">同じ縮尺</text>
 
   <!-- ============ Left: light black hole, tidal disruption ============ -->
   <text x="225" y="40" font-size="21" fill="#222" text-anchor="middle" font-weight="bold">軽い BH (3.6 M☉): 潮汐破壊</text>
@@ -45,7 +46,6 @@
     <line x1="96" y1="399" x2="140" y2="399" stroke="#D55E00" stroke-width="2"/>
     <text x="150" y="405">星が壊れる距離 (潮汐破壊半径)</text>
     <line x1="428" y1="399" x2="472" y2="399" stroke="#777" stroke-width="2" stroke-dasharray="6 5"/>
-    <text x="482" y="405">ISCO (これより内側は回れない)</text>
-    <text x="806" y="405" fill="#777" text-anchor="middle">同じ縮尺</text>
+    <text x="482" y="405">ISCO (Innermost Stable Circular Orbit)</text>
   </g>
 </svg>
