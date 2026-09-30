@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif">
+  <!-- Dashed outline = rebuilt at every relaunch. Solid outline = survives the whole run. -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#444"/>
+    </marker>
+    <marker id="arrowred" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#D55E00"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="900" height="400" rx="16" fill="#ffffff"/>
+
+  <!-- ============ Spot node (ephemeral) ============ -->
+  <rect x="40" y="44" width="330" height="190" rx="14" fill="#f3f8fc" stroke="#0072B2" stroke-width="2.5" stroke-dasharray="9 6"/>
+  <text x="205" y="76" font-size="20" fill="#222" text-anchor="middle" font-weight="bold">計算機 (スポット)</text>
+  <text x="205" y="100" font-size="15" fill="#555" text-anchor="middle">いつ止められるか分からない</text>
+  <rect x="66" y="118" width="278" height="40" rx="8" fill="#ffffff" stroke="#9db9cc" stroke-width="1.5"/>
+  <text x="205" y="144" font-size="17" fill="#222" text-anchor="middle">シミュレーション (192 並列)</text>
+  <rect x="66" y="170" width="278" height="40" rx="8" fill="#ffffff" stroke="#9db9cc" stroke-width="1.5"/>
+  <text x="205" y="196" font-size="17" fill="#222" text-anchor="middle">手元のディスク: 途中経過</text>
+
+  <!-- ============ Object storage (durable) ============ -->
+  <rect x="560" y="44" width="300" height="190" rx="14" fill="#f3faf7" stroke="#009E73" stroke-width="2.5"/>
+  <text x="710" y="76" font-size="20" fill="#222" text-anchor="middle" font-weight="bold">外部ストレージ</text>
+  <text x="710" y="100" font-size="15" fill="#555" text-anchor="middle">計算機が消えても残る</text>
+  <rect x="586" y="118" width="248" height="40" rx="8" fill="#ffffff" stroke="#a5cdbf" stroke-width="1.5"/>
+  <text x="710" y="144" font-size="17" fill="#222" text-anchor="middle">途中経過 (85.7 GB)</text>
+  <rect x="586" y="170" width="248" height="40" rx="8" fill="#ffffff" stroke="#a5cdbf" stroke-width="1.5"/>
+  <text x="710" y="196" font-size="17" fill="#222" text-anchor="middle">結果 (波形・密度など)</text>
+
+  <!-- ============ Arrows between them ============ -->
+  <line x1="374" y1="112" x2="554" y2="112" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="464" y="102" font-size="16" fill="#222" text-anchor="middle">30 分ごとに送る</text>
+  <line x1="554" y1="186" x2="374" y2="186" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="464" y="210" font-size="16" fill="#222" text-anchor="middle">起動時に読み戻す</text>
+
+  <!-- ============ The loop underneath ============ -->
+  <rect x="40" y="292" width="230" height="70" rx="12" fill="#fdf3ec" stroke="#D55E00" stroke-width="2"/>
+  <text x="155" y="322" font-size="18" fill="#222" text-anchor="middle" font-weight="bold">中断</text>
+  <text x="155" y="346" font-size="15" fill="#555" text-anchor="middle">2 分前に予告が来る</text>
+
+  <rect x="335" y="292" width="230" height="70" rx="12" fill="#f6f6f6" stroke="#777" stroke-width="2"/>
+  <text x="450" y="322" font-size="18" fill="#222" text-anchor="middle" font-weight="bold">空きを探して作り直す</text>
+  <text x="450" y="346" font-size="15" fill="#555" text-anchor="middle">自動 (数分〜2 時間)</text>
+
+  <rect x="630" y="292" width="230" height="70" rx="12" fill="#f6f6f6" stroke="#777" stroke-width="2"/>
+  <text x="745" y="322" font-size="18" fill="#222" text-anchor="middle" font-weight="bold">続きから再開</text>
+  <text x="745" y="346" font-size="15" fill="#555" text-anchor="middle">失うのは 8〜19 分ぶん</text>
+
+  <line x1="155" y1="238" x2="155" y2="286" stroke="#D55E00" stroke-width="2" marker-end="url(#arrowred)"/>
+  <line x1="274" y1="327" x2="329" y2="327" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="569" y1="327" x2="624" y2="327" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 745 286 L 745 262 L 300 262 L 300 240" fill="none" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>
