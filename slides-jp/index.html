@@ -264,25 +264,57 @@
 
 ---
 
+### ISCO: 人工衛星の直感が破れる場所
+
+<div class="container">
+<div class="col-box-left">
+
+**人工衛星 (ニュートン)**
+
+* 重力と遠心力の釣り合いで回る
+* 速さを合わせれば、**どの高さでも**回れる
+* 少しずれても、楕円軌道になるだけ
+
+</div>
+<div class="col-box-right">
+
+**BH のそば (一般相対論)**
+
+* 回る仕組みは同じ
+* 近づくと重力が逆 2 乗より**急に強まる**
+* ISCO より内側には**安定な円軌道が無い** → 落ちていく
+
+</div>
+</div>
+
+<div class="highlight-box">
+
+ISCO の半径は BH の**質量に比例**する (3.6 $M_{\odot}$ なら 32 km)
+
+</div>
+
+---
+
 ### なぜ軽い BH だと壊れるのか
 
 <div class="simple-box">
 
-* 星が壊れ始める距離: $r_{\mathrm{tid}} \sim R_{\mathrm{NS}} (M_{\mathrm{BH}} / M_{\mathrm{NS}})^{1/3}$
-* 安定に回れる限界: $r_{\mathrm{ISCO}} = 6 G M_{\mathrm{BH}} / c^2$
-* BH を 3.6 → 10 $M_{\odot}$ にすると
-  * $r_{\mathrm{ISCO}}$ は 32 → 89 km (**2.8 倍**)
-  * $r_{\mathrm{tid}}$ は **1.4 倍**どまり
+* **潮汐力**: 星の手前と奥で、BH の引力の強さが違う
+  * 星を引き伸ばす力。地球の潮の満ち引きと同じ
+  * 距離の **3 乗**で弱まる
+* BH を 3.6 → 10 $M_{\odot}$ (2.8 倍) にすると
+  * 星が壊れる距離: 2.8 の 3 乗根 = **1.4 倍**
+  * ISCO: 質量に比例して **2.8 倍**
 
 </div>
 
 <div class="highlight-box">
 
-重い BH は壊す前に飲み込む。**軽い BH ほど、外で壊せる**
+重い BH は壊す前に ISCO の内側へ。**軽い BH は外で壊し、破片は回り続けて円盤に**
 
 </div>
 
-<small>※ 自転していない BH の場合の、桁の見積り</small>
+<small>※ 自転していない BH の場合の、桁の見積り。式は Appendix D</small>
 
 ---
 
@@ -640,7 +672,7 @@
 
 <div class="highlight-box">
 
-設定とインフラ構成は GitHub で公開 (Appendix D)
+設定とインフラ構成は GitHub で公開 (Appendix E)
 
 </div>
 
@@ -737,7 +769,28 @@
 
 ---
 
-### Appendix D: 公開物・参考文献
+### Appendix D: 潮汐破壊と ISCO
+
+<div class="simple-box" style="font-size: 0.7em;">
+
+* 星が壊れる距離: 星の表面で、潮汐力が自己重力に勝つところ
+  $$ \frac{2 G M_{\mathrm{BH}} R_{\mathrm{NS}}}{r^3} \sim \frac{G M_{\mathrm{NS}}}{R_{\mathrm{NS}}^2} \quad \Rightarrow \quad r_{\mathrm{tid}} \sim R_{\mathrm{NS}} (2 M_{\mathrm{BH}} / M_{\mathrm{NS}})^{1/3} $$
+* 自転しない BH の有効ポテンシャル (単位質量あたり、$L$: 角運動量)
+  $$ V_{\mathrm{eff}}(r) = -\frac{G M_{\mathrm{BH}}}{r} + \frac{L^2}{2 r^2} - \frac{G M_{\mathrm{BH}} L^2}{c^2 r^3} $$
+  * 第 3 項が一般相対論の補正 (逆 2 乗より強い引力)
+  * 安定な円軌道は $r \geq 6 G M_{\mathrm{BH}} / c^2$ に限られる (ISCO)
+
+</div>
+
+<div class="highlight-box" style="font-size: 0.7em;">
+
+$r_{\mathrm{tid}} \propto M_{\mathrm{BH}}^{1/3}$、$r_{\mathrm{ISCO}} \propto M_{\mathrm{BH}}$。係数はモデル依存なので、比だけを使う
+
+</div>
+
+---
+
+### Appendix E: 公開物・参考文献
 
 <div class="simple-box" style="font-size: 0.75em;">
 
