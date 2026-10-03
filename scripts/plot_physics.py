@@ -31,8 +31,10 @@ INK_MUTED = "0.35"
 M_SUN_MS = 1.32712440018e20 / 2.99792458e8**3 * 1e3
 
 # Coordinate merger time in M_sun: the Psi4 peak at r = 500 arrives at
-# t = 1213, minus the extraction radius. Same value as the other figures.
-MERGER_TIME = 713.0
+# t = 1213, minus the tortoise-coordinate delay r* = 538.9 (the simulation
+# repository's correction of 2026-10-03). The infrastructure repository's
+# figures still subtract the bare radius and mark 713.
+MERGER_TIME = 674.0
 
 
 def apply_style():
