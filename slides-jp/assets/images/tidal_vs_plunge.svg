@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif">
+  <!-- Schematic, both panels at the same scale: 1 km = 1.5 px. Non-spinning black holes.
+       Light: 3.6 Msun -> horizon 10.6 km, ISCO 32 km, tidal radius ~47 km
+       Heavy: 10 Msun  -> horizon 29.5 km, ISCO 89 km, tidal radius ~66 km
+       Tidal radius drawn with the fluid Roche coefficient 2.44 and a 14 km star. -->
+  <rect x="0" y="0" width="900" height="430" rx="16" fill="#ffffff"/>
+  <line x1="450" y1="58" x2="450" y2="356" stroke="#dddddd" stroke-width="1"/>
+  <text x="450" y="40" font-size="17" fill="#777" text-anchor="middle">同じ縮尺</text>
+
+  <!-- ============ Left: light black hole, tidal disruption ============ -->
+  <text x="225" y="40" font-size="21" fill="#222" text-anchor="middle" font-weight="bold">軽い BH (3.6 M☉): 潮汐破壊</text>
+  <g transform="translate(225,195)">
+    <!-- disc left behind -->
+    <circle r="58" fill="none" stroke="#E69F00" stroke-width="20" opacity="0.28"/>
+    <!-- tidal radius -->
+    <circle r="70" fill="none" stroke="#D55E00" stroke-width="2"/>
+    <!-- ISCO -->
+    <circle r="48" fill="none" stroke="#777" stroke-width="2" stroke-dasharray="6 5"/>
+    <!-- torn star: an arc hugging the tidal radius, thick at the head -->
+    <path d="M -70 0 A 70 70 0 0 1 -35 -60.6" fill="none" stroke="#E69F00" stroke-width="22" stroke-linecap="round"/>
+    <path d="M -35 -60.6 A 70 70 0 0 1 49.5 -49.5" fill="none" stroke="#E69F00" stroke-width="11" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 49.5 -49.5 A 78 78 0 0 1 96 22" fill="none" stroke="#E69F00" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+    <!-- black hole -->
+    <circle r="16" fill="#111"/>
+  </g>
+  <text x="225" y="346" font-size="18" fill="#222" text-anchor="middle">ISCO の外で壊れる → 円盤が残る</text>
+
+  <!-- ============ Right: heavy black hole, plunge ============ -->
+  <text x="675" y="40" font-size="21" fill="#222" text-anchor="middle" font-weight="bold">重い BH (10 M☉): 丸呑み</text>
+  <g transform="translate(675,195)">
+    <!-- tidal radius, now inside the ISCO -->
+    <circle r="99" fill="none" stroke="#D55E00" stroke-width="2"/>
+    <!-- ISCO -->
+    <circle r="133" fill="none" stroke="#777" stroke-width="2" stroke-dasharray="6 5"/>
+    <!-- intact star crossing the ISCO, with its plunge path -->
+    <path d="M -133 0 C -120 50, -70 62, -40 28" fill="none" stroke="#E69F00" stroke-width="3" stroke-dasharray="3 6" stroke-linecap="round"/>
+    <circle cx="-133" cy="0" r="16" fill="#E69F00" stroke="#ffffff" stroke-width="2"/>
+    <!-- black hole -->
+    <circle r="44" fill="#111"/>
+  </g>
+  <text x="675" y="346" font-size="18" fill="#222" text-anchor="middle">壊れる前に ISCO を越える → 何も残らない</text>
+
+  <!-- ============ Shared legend ============ -->
+  <line x1="60" y1="372" x2="840" y2="372" stroke="#e5e5e5" stroke-width="1"/>
+  <g font-size="17" fill="#222">
+    <line x1="96" y1="399" x2="140" y2="399" stroke="#D55E00" stroke-width="2"/>
+    <text x="150" y="405">星が壊れる距離 (潮汐破壊半径)</text>
+    <line x1="428" y1="399" x2="472" y2="399" stroke="#777" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="482" y="405">ISCO (Innermost Stable Circular Orbit)</text>
+  </g>
+</svg>

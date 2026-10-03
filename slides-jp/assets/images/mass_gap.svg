@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif">
+  <!-- Mass axis: x = 70 + 110 * (mass in solar masses), 0 to 7 -->
+  <defs>
+    <pattern id="gap" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="10" height="10" fill="#f1f1f1"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#c9c9c9" stroke-width="3"/>
+    </pattern>
+    <linearGradient id="bhfade" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#3a3a3a"/>
+      <stop offset="0.75" stop-color="#3a3a3a"/>
+      <stop offset="1" stop-color="#3a3a3a" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="900" height="350" rx="16" fill="#ffffff"/>
+
+  <!-- Row 1: what is known -->
+  <text x="24" y="38" font-size="19" fill="#555">これまで知られていた天体</text>
+  <rect x="191" y="56" width="110" height="46" rx="6" fill="#0072B2" opacity="0.85"/>
+  <text x="246" y="86" font-size="19" fill="#ffffff" text-anchor="middle">中性子星</text>
+  <rect x="400" y="56" width="220" height="46" fill="url(#gap)" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="510" y="86" font-size="19" fill="#222" text-anchor="middle">質量ギャップ</text>
+  <rect x="620" y="56" width="256" height="46" rx="0" fill="url(#bhfade)"/>
+  <text x="726" y="86" font-size="19" fill="#ffffff" text-anchor="middle">ブラックホール</text>
+
+  <!-- Gap guides running down through row 2 -->
+  <line x1="400" y1="102" x2="400" y2="262" stroke="#bdbdbd" stroke-width="1"/>
+  <line x1="620" y1="102" x2="620" y2="262" stroke="#bdbdbd" stroke-width="1"/>
+
+  <!-- Row 2: GW230529, 90% credible intervals -->
+  <text x="24" y="150" font-size="19" fill="#555">GW230529 (90% 信用区間)</text>
+  <!-- secondary 1.2 - 2.0, median 1.4 -->
+  <line x1="202" y1="188" x2="290" y2="188" stroke="#0072B2" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="224" cy="188" r="10" fill="#0072B2" stroke="#ffffff" stroke-width="2"/>
+  <text x="246" y="226" font-size="18" fill="#222" text-anchor="middle">軽い方 約 1.4</text>
+  <!-- primary 2.5 - 4.5, median 3.6 -->
+  <line x1="345" y1="188" x2="565" y2="188" stroke="#D55E00" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="466" cy="188" r="10" fill="#D55E00" stroke="#ffffff" stroke-width="2"/>
+  <text x="466" y="226" font-size="18" fill="#222" text-anchor="middle">重い方 約 3.6</text>
+
+  <!-- Axis -->
+  <line x1="70" y1="262" x2="860" y2="262" stroke="#444" stroke-width="1.5"/>
+  <g stroke="#444" stroke-width="1.5">
+    <line x1="70" y1="262" x2="70" y2="270"/>
+    <line x1="180" y1="262" x2="180" y2="270"/>
+    <line x1="290" y1="262" x2="290" y2="270"/>
+    <line x1="400" y1="262" x2="400" y2="270"/>
+    <line x1="510" y1="262" x2="510" y2="270"/>
+    <line x1="620" y1="262" x2="620" y2="270"/>
+    <line x1="730" y1="262" x2="730" y2="270"/>
+    <line x1="840" y1="262" x2="840" y2="270"/>
+  </g>
+  <g font-size="18" fill="#222" text-anchor="middle">
+    <text x="70" y="294">0</text>
+    <text x="180" y="294">1</text>
+    <text x="290" y="294">2</text>
+    <text x="400" y="294">3</text>
+    <text x="510" y="294">4</text>
+    <text x="620" y="294">5</text>
+    <text x="730" y="294">6</text>
+    <text x="840" y="294">7</text>
+  </g>
+  <text x="465" y="330" font-size="18" fill="#555" text-anchor="middle">質量 [太陽質量 M☉]</text>
+</svg>
